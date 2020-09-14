@@ -2,7 +2,7 @@ package com.service.usercommservice.model;
 
 public enum MessageType {
 	
-	EMAIL("email"),SMS("sms"),GCMN("GCM_notification");
+	EMAIL("email"),SMS("sms"),GCM("gcm");
 	
 	private String type;
 
@@ -13,7 +13,8 @@ public enum MessageType {
 	public String getType() {
 		return type;
 	}
-	
+
+
 	public String toString()
 	{
 		return type;

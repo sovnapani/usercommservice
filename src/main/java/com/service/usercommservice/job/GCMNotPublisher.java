@@ -27,7 +27,7 @@ public class GCMNotPublisher implements Publisher{
 	@Override
 	public MessageType getMessageType() {
 		// TODO Auto-generated method stub
-		return MessageType.GCMN;
+		return MessageType.GCM;
 	}
 	
 }

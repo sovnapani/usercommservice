@@ -47,7 +47,7 @@ public class MessageJMSController {
   @JmsListener(destination = "gcm")
   public void receiveGCMNMessage(Message message) {
     logger.info("Received <{}>" , message);
-    senderMap.get(MessageType.GCMN).sendMessage(message);
+    senderMap.get(MessageType.GCM).sendMessage(message);
   }
   
   

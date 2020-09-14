@@ -19,7 +19,7 @@ public class GCMNSender implements Sender{
 	@Override
 	public MessageType getMessageType() {
 		// TODO Auto-generated method stub
-		return MessageType.GCMN;
+		return MessageType.GCM;
 	}
 	
 	

@@ -3,7 +3,6 @@ package com.service.usercommservice.service;
 import com.service.usercommservice.job.Publisher;
 import com.service.usercommservice.model.Message;
 import com.service.usercommservice.model.MessageType;
-import com.service.usercommservice.model.UserCommMessage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
@@ -28,23 +27,12 @@ public class UserCommService {
 		publisherMap = applicationContext.getBeansOfType(Publisher.class).values().stream().collect(Collectors.toMap(p->p.getMessageType(), p->p));
 	}
 	
-	public String send(UserCommMessage userCommMessage) {
-		List<Message> emails = userCommMessage.getEmail();
-		if(emails!=null && emails.size()>0)
-		{
-			publisherMap.get(MessageType.EMAIL).publish(emails);
+	public String send(Map<String,List<Message>> userCommMessage) {
+
+		for(Map.Entry<String,List<Message>> entry : userCommMessage.entrySet()){
+			publisherMap.get(Enum.valueOf(MessageType.class,entry.getKey().toUpperCase())).publish(entry.getValue());
 		}
-		List<Message> sms = userCommMessage.getSms();
-		if(sms!=null && sms.size()>0)
-		{
-			publisherMap.get(MessageType.SMS).publish(sms);
-		}
-		List<Message> gcm = userCommMessage.getGcm();
-		if(gcm!=null && gcm.size()>0)
-		{
-			publisherMap.get(MessageType.GCMN).publish(gcm);
-		}
-		
+
 		return "OK";
 		
 	}
