@@ -1,9 +1,9 @@
 package com.service.usercommservice.job;
 
-import java.util.List;
-
 import com.service.usercommservice.model.Message;
 import com.service.usercommservice.model.MessageType;
+
+import java.util.List;
 
 public interface Publisher {
 

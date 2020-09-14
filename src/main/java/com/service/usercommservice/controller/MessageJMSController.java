@@ -1,23 +1,18 @@
 package com.service.usercommservice.controller;
 
-import java.util.Map;
-import java.util.stream.Collectors;
-
-import javax.annotation.PostConstruct;
-
+import com.service.usercommservice.model.Message;
+import com.service.usercommservice.model.MessageType;
+import com.service.usercommservice.sender.Sender;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.jms.annotation.JmsListener;
-import org.springframework.jms.core.JmsTemplate;
 import org.springframework.stereotype.Component;
 
-import com.service.usercommservice.model.Message;
-import com.service.usercommservice.model.MessageType;
-import com.service.usercommservice.sender.SMSSender;
-import com.service.usercommservice.sender.Sender;
-import com.service.usercommservice.service.SenderService;
+import javax.annotation.PostConstruct;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 @Component
 public class MessageJMSController {

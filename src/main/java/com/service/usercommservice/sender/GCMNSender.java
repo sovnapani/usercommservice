@@ -1,11 +1,10 @@
 package com.service.usercommservice.sender;
 
+import com.service.usercommservice.model.Message;
+import com.service.usercommservice.model.MessageType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
-
-import com.service.usercommservice.model.Message;
-import com.service.usercommservice.model.MessageType;
 @Component
 public class GCMNSender implements Sender{
 

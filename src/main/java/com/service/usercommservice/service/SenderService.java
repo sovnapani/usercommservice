@@ -1,16 +1,14 @@
 package com.service.usercommservice.service;
 
-import java.util.Map;
-import java.util.stream.Collectors;
-
-import javax.annotation.PostConstruct;
-
+import com.service.usercommservice.model.MessageType;
+import com.service.usercommservice.sender.Sender;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
 
-import com.service.usercommservice.model.MessageType;
-import com.service.usercommservice.sender.Sender;
+import javax.annotation.PostConstruct;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 @Component
 public class SenderService {

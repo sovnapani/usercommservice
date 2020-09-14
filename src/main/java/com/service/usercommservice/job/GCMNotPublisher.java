@@ -1,14 +1,13 @@
 package com.service.usercommservice.job;
 
-import java.util.List;
-import java.util.UUID;
-
+import com.service.usercommservice.model.Message;
+import com.service.usercommservice.model.MessageType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.stereotype.Component;
 
-import com.service.usercommservice.model.Message;
-import com.service.usercommservice.model.MessageType;
+import java.util.List;
+import java.util.UUID;
 @Component
 public class GCMNotPublisher implements Publisher{
 

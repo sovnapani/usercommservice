@@ -1,19 +1,17 @@
 package com.service.usercommservice.service;
 
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
-
-import javax.annotation.PostConstruct;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
-import org.springframework.stereotype.Component;
-
 import com.service.usercommservice.job.Publisher;
 import com.service.usercommservice.model.Message;
 import com.service.usercommservice.model.MessageType;
 import com.service.usercommservice.model.UserCommMessage;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.stereotype.Component;
+
+import javax.annotation.PostConstruct;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 @Component
 public class UserCommService {
